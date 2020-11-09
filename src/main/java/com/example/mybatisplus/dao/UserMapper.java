@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public interface UserMapper extends BaseMapper<User> {
 
-    @Select("select tu.* from tb_user tu INNER JOIN tb_user_coupon tuc on tu.id=tuc.user_id where tuc.user_id=#{userId}")
+    @Select("select * from tb_user tu INNER JOIN tb_user_coupon tuc on tu.id=tuc.user_id where tuc.user_id=#{userId}")
     List<UserVo> findUserVo(@Param("userId") String userId);
 
 }

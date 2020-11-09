@@ -1,11 +1,18 @@
 package com.example.mybatisplus.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.oracle.webservices.internal.api.databinding.DatabindingMode;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.xml.ws.BindingType;
 import java.time.LocalDateTime;
 
 @Data
-public class UserVo  extends User{
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserVo{
     //主键
     private Long id;
     //用户名
@@ -20,4 +27,7 @@ public class UserVo  extends User{
     private Integer  age;
 
     private String  status;
+
+
+
 }
